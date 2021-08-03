@@ -1,0 +1,23 @@
+@import '@fontsource/fira-mono';
+
+body {
+	min-height: 100vh;
+	margin: 0;
+}
+
+body::before {
+	content: '';
+	width: 80vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 10vw;
+	z-index: -1;
+	opacity: 0.05;
+}
+
+#svelte {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
