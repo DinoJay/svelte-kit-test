@@ -38,7 +38,7 @@
 	// });
 </script>
 
-<span class="{className} mb-4 relative title">
+<span class="{className}  relative title">
 	<span class=" w-full opacity-0  px-2 font-mono font-bold "><slot /></span>
 	<span
 		style="transform: translate({translateFirst[0]}%, {translateFirst[1]}%)"

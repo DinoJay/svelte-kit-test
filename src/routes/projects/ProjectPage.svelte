@@ -6,7 +6,7 @@
 	const rowHeight = 20;
 	let prepData = [];
 	let offsetWidth = 0;
-	const divisor = 10;
+	const divisor = 5;
 	$: {
 		prepData = data.map((d) => ({
 			...d,
@@ -22,8 +22,8 @@
 	};
 </script>
 
-<div class="h-screen mt-auto">
-	<div class="w-full flex items-center" bind:offsetWidth>
+<div class="h-screen mt-auto flex flex-col">
+	<div class="w-full md:flex items-center m-auto" bind:offsetWidth>
 		<h1 class="text-7xl mb-3 mr-6"><Title>Projects</Title></h1>
 		<div class="gallery flex-grow overflow-auto">
 			{#each prepData as d (d.id)}

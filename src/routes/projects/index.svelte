@@ -8,7 +8,7 @@
 	const urlExtra =
 		'&extras=description,date_upload,geo,tags,machine_tags,o_dims,views,media,path_alias,url_sq,url_t,url_s,url_q,url_m,url_n,url_z,url_c,url_l,url_o&format=json&nojsoncallback=1';
 	const contentType = 'content_type=7';
-	const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=5c4e7ab0a5acc4e3b261f08e16011d48&user_id=156337600%40N04&tags=${searchKey}&${contentType}&format=json&nojsoncallback=1${urlExtra}`;
+	const url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${API_KEY}&user_id=156337600%40N04&tags=${searchKey}&${contentType}&format=json&nojsoncallback=1${urlExtra}`;
 
 	let promise = null;
 	onMount(() => {
