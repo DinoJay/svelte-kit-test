@@ -20,12 +20,20 @@
 	//     console.log({ rXP, rYP });
 	//   });
 	// });
+
+	let translateFirstTitle = [0, 0];
+	let translateSecTitle = [1.5, 0];
+	let translateThirdTitle = [3, 0];
 </script>
 
 <div class="flex-grow flex items-center">
 	<div class="max-w-2xl mr-12 ">
 		<h1 class="text-7xl mb-4 relative">
-			<Title>Jan Maushagen</Title>
+			<Title
+				translateFirst={translateFirstTitle}
+				translateSec={translateSecTitle}
+				translateThird={translateThirdTitle}>Jan Maushagen</Title
+			>
 		</h1>
 		<p class="text-gray-700">
 			<span class="line-through">PhD student</span>, orginally from Germany, (32) years{' and '} me {6}

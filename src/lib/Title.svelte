@@ -2,8 +2,8 @@
 	export let className = '';
 	export let animate = false;
 	export let translateFirst = [0, 0];
-	export let translateSec = [1.5, 0];
-	export let translateThird = [3, 0];
+	export let translateSec = [1, 0];
+	export let translateThird = [1, 0];
 	import { onMount } from 'svelte';
 	// onMount(() => {
 	let s0;
