@@ -3,14 +3,26 @@
 	import '../app.css';
 </script>
 
-<main>
+<main class="shadow-md">
 	<slot />
 </main>
 
 <footer />
 
 <style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	body {
+		background: url('/linedpaper.png');
+		font-family: 'Arimo', sans-serif;
+		/* @apply border-2 border-black; */
+	}
+
 	main {
+		background: url('/linedpaper.png');
+		font-family: 'Arimo', sans-serif;
 		flex: 1;
 		display: flex;
 		flex-direction: column;
