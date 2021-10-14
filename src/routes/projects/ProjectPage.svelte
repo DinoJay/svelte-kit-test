@@ -23,18 +23,17 @@
 </script>
 
 <div class="h-screen mt-auto flex flex-col">
+	<h1 class="text-7xl mb-3 mr-6"><Title>Jan Maushagen</Title></h1>
 	<div class="w-full md:flex items-center m-auto" bind:offsetWidth>
 		<h1 class="text-7xl mb-3 mr-6"><Title>Projects</Title></h1>
-		<div class="gallery flex-grow overflow-auto">
+		<div class="gallery flex-grow overflow-auto ">
 			{#each prepData as d (d.id)}
-				<div
-					role="button"
-					on:click={() => (id = id !== d.id ? id : d.id)}
-					class=" flex flex-col pb-3"
-				>
-					<Title>{d.title}</Title>
-					<img class="flex-grow" alt={d.id} src={d.url_m} />
-				</div>
+				<a href={`/projects/${d.id}`}>
+					<div role="button" class=" mb-3 flex flex-col pb-3 shadow-lg">
+						<Title>{d.title}</Title>
+						<img class="flex-grow" alt={d.id} src={d.url_m} />
+					</div>
+				</a>
 			{/each}
 		</div>
 	</div>
@@ -49,7 +48,8 @@
 
 		/* display: grid;
     grid-template-rows: repeat(20, 8px);
-    grid-gap: 15px; */
+     */
+		grid-gap: 10px;
 		/* grid-auto-flow: dense; */
 	}
 	.gallery div {

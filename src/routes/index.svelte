@@ -6,104 +6,113 @@
 	let rXP = 170;
 	let rYP = 319;
 
-	export let translateFirst = [0, 0];
-	export let translateSec = [1.2, 0];
-	export let translateThird = [1.3, 0];
-	// onMount(() => {
-	//   document.addEventListener('mousemove', (e) => {
-	//     const offX = title ? title.offsetLeft : 0;
-	//     const offY = title ? title.offsetTop : 0;
-	//     const offsetWidth = title ? title.offsetWidth : 0;
-	//     const offsetHeight = title ? title.offsetHeight : 0;
-	//     rXP = Math.max(Math.min(e.pageX - offX - offsetWidth / 2, 170), -170);
-	//     rYP = e.pageY - offY - offsetHeight / 2;
-	//     console.log({ rXP, rYP });
-	//   });
-	// });
+	export let translateFirst = [3, 0];
+	export let translateSec = [5, 0];
+	export let translateThird = [12, 0];
 
-	let translateFirstTitle = [0, 0];
-	let translateSecTitle = [1.5, 0];
-	let translateThirdTitle = [3, 0];
+	let translateFirstTitle = [3, 0];
+	let translateSecTitle = [5, 0];
+	let translateThirdTitle = [12, 0];
 </script>
 
-<div class="flex-grow flex items-center">
-	<div class="max-w-2xl mr-12 ">
-		<h1 class="text-7xl mb-4 relative">
-			<Title
-				translateFirst={translateFirstTitle}
-				translateSec={translateSecTitle}
-				translateThird={translateThirdTitle}>Jan Maushagen</Title
-			>
-		</h1>
-		<p class="text-gray-700">
-			<span class="line-through">PhD student</span>, orginally from Germany, (32) years{' and '} me {6}
-			months old) for{' '}
-			{7} years now. Getting my head around research, programming and languages. Drinking cappucino in
-			the morning, jogging and doing Diss-co music in the evening. As part of my day job I work on data
-			visualization and educational Games!
-		</p>
+<div class="flex flex-col justify-center ">
+	<div class="flex  justify-start items-center mb-4">
+		<Title
+			translateFirst={translateFirstTitle}
+			translateSec={translateSecTitle}
+			translateThird={translateThirdTitle}
+			className="text-7xl z-10">Jan <br />Maus+<br />hagen</Title
+		>
+		<img
+			class="w-48 box1 border-black h-40 object-cover ml-20 border-round"
+			style="height:14rem; width:14rem"
+			src="jan_profile.jpg"
+		/>
 	</div>
-	<div class="gallery flex-grow">
-		<div class="firstPic ">
-			<a href="/projects">
-				<Pic src="/whiteboard.jpg" className="w-full h-full bg-cover bg-center">
+	<p class="text-gray-700 mt-12">
+		<span class="line-through">PhD student</span>, orginally from Germany, (32) years{' and '} me {6}
+		months old) for{' '}
+		{7} years now. Getting my head around research, programming and languages. Drinking cappucino in
+		the morning, jogging and doing Diss-co music in the evening. As part of my day job I work on data
+		visualization and educational Games!
+	</p>
+	<div class=" mt-16 flex-grow flex">
+		<div class="flex-grow mr-6">
+			<div class=" item1 h-48 flex flex-col">
+				<Pic src="/whiteboard.jpg" className="rounded-full box1 w-full h-full bg-cover bg-center">
 					<h2 class="">
-						<span class="text-4xl  py-1 uppercase font-mono"
-							><Title {translateFirst} {translateSec} {translateThird}>#projects</Title></span
+						<span class="text-3xl  py-1 uppercase font-mono"
+							><Title {translateFirst} {translateSec} {translateThird}>projects</Title></span
 						>
 					</h2>
 				</Pic>
-			</a>
-		</div>
-		<div class="secPic">
-			<a href="/mixtapes" class="w-full h-full">
-				<Pic src="/mixer.jpg" className="bg-center bg-cover w-full h-full ">
+			</div>
+			<div class=" h-32 item2  flex flex-col ">
+				<Pic src="/mixer.jpg" className="bg-center bg-cover box1 ">
 					<h2 class="">
-						<span class="text-4xl  py-1 uppercase font-mono"
-							><Title {translateFirst} {translateSec} {translateThird}>#mixtapes</Title></span
+						<span class="text-3xl  py-1 uppercase font-mono"
+							><Title {translateFirst} {translateSec} {translateThird}>mixtapes</Title></span
 						>
 					</h2>
 				</Pic>
-			</a>
-		</div>
-		<div class="thirdPic">
-			<a class="w-full h-full" href="/projects">
-				<Pic src="/tickle.jpg" className="cover bg-cover bg-center w-full h-full ">
+			</div>
+			<div class="h-32 flex  flex-col">
+				<Pic src="/tickle.jpg" className="box3 cover bg-cover bg-center w-full h-full ">
 					<h2 class="bottom-0">
-						<span class=" text-xl py-1 uppercase font-mono"
-							><Title {translateFirst} {translateSec} {translateThird}>#projects/</Title></span
-						>
-						<span class=" text-xl py-1 uppercase font-mono"
-							><Title {translateFirst} {translateSec} {translateThird}>tickle</Title></span
+						<span class=" text-3xl py-1 uppercase font-mono"
+							><Title {translateFirst} {translateSec} {translateThird}>TICKLE</Title></span
 						>
 					</h2>
 				</Pic>
-			</a>
+			</div>
 		</div>
-		<div class="fourthPic">
-			<a href="/work">
-				<Pic src="me_blurred.jpg" className="bg-center bg-cover w-full h-full ">
-					<h2>
-						<span class="text-2xl  py-1 uppercase font-mono"
-							><Title {translateFirst} {translateSec} {translateThird}>#work</Title></span
-						>
-					</h2>
-				</Pic>
-			</a>
-		</div>
-		<div class="fifthPic">
-			<a href="/projects" class="w-full h-full">
-				<Pic src="/holger.jpg" className="bg-cover bg-center w-full h-full ">
-					<span class="py-1 text-2xl uppercase font-mono"
-						><Title {translateFirst} {translateSec} {translateThird}>#project/vinyl</Title></span
+		<div class="flex flex-col flex-grow h-96">
+			<Pic src="me_blurred.jpg" className="  box1 bg-center bg-cover w-full h-full ">
+				<h2>
+					<span class="text-3xl  py-1 uppercase font-mono"
+						><Title {translateFirst} {translateSec} {translateThird}>work</Title></span
 					>
-				</Pic>
-			</a>
+				</h2>
+			</Pic>
+		</div>
+		<div class="flex flex-col border-round flex-grow h-96">
+			<Pic src="/holger.jpg" className=" box1 bg-cover bg-center w-full h-full ">
+				<span class="py-1 text-3xl uppercase font-mono"
+					><Title {translateFirst} {translateSec} {translateThird}>Vinyl</Title></span
+				>
+			</Pic>
 		</div>
 	</div>
 </div>
 
-<style>
+<style lang="scss">
+	.box {
+		margin: 25px;
+		width: 250px;
+		height: 250px;
+		background: #fff;
+		border: solid black;
+		border-color: black;
+		float: left;
+	}
+
+	.box1 {
+		border-width: 3px 4px 3px 5px;
+		border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+		transform: rotate(2deg);
+	}
+	.box2 {
+		width: 350px;
+		border-width: 3px 3px 5px 5px;
+		border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
+		transform: rotate(-2deg);
+	}
+
+	.box3 {
+		border-width: 5px 3px 3px 5px;
+		border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+		transform: rotate(2deg);
+	}
 	.first {
 		transform: translate(0%, 0%);
 		color: #0091e5;
@@ -158,33 +167,67 @@
 			0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
 			0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 	}
+	.container {
+		margin-left: 20px;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+
+		grid-template-rows: repeat(6, 1fr);
+		gap: 35px 35px;
+		grid-template-areas:
+			'left-top right-top .'
+			'center-right center-left .'
+			'bottom-left bottom-right .';
+	}
+	.item1 {
+		grid-area: left-top;
+	}
+	.item2 {
+		grid-area: right-top;
+	}
+	.item3 {
+		grid-area: center-right;
+	}
+	.item4 {
+		grid-area: center-left;
+	}
+	.item5 {
+		grid-area: bottom-left;
+	}
+	.item6 {
+		grid-area: bottom-right;
+	}
 
 	.gallery {
 		display: grid;
-		grid-template-columns: repeat(16, 1fr);
-		grid-template-rows: repeat(18, 20px);
-		column-gap: 25px;
-		row-gap: 20px;
+		grid-template-columns: repeat(10, 1fr);
+		grid-template-rows: repeat(4, 20px);
+		// column-gap: 25px;
+		// row-gap: 20px;
 	}
 	.firstPic {
 		/* background-image: url(/whiteboard.jpg); */
-		grid-column: span 9;
-		grid-row: 1 / span 10;
+		grid-column: span 7;
+		grid-row: auto;
 	}
 	.secPic {
 		grid-column: span 7;
-		grid-row: 2 / span 6;
+		grid-row: auto;
+		// grid-row: 2 / span 6;
 	}
 	.thirdPic {
 		grid-column: span 4;
-		grid-row: 11 / span 6;
+		grid-row: auto;
+		// grid-row: 11 / span 6;
 	}
 	.fourthPic {
 		grid-column: span 5;
-		grid-row: 11 / span 7;
+		grid-row: auto;
+		// grid-row: 11 / span 7;
 	}
 	.fifthPic {
 		grid-column: span 7;
-		grid-row: 8 / span 8;
+		grid-row: auto;
+		// grid-row: 8 / span 8;
 	}
 </style>

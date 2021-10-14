@@ -35,12 +35,11 @@
 			<div
 				role="button"
 				on:click={() => (id = id !== d.id ? id : d.id)}
-				class="w-full h-full relative -3"
+				class="w-full h-full relative flex flex-col overflow-hidden"
 				style={getStyles(d)}
 			>
-				<Pic src={d.url_m}>
-					<span class="  w-full px-2"><Title className="w-full">{d.title}</Title></span>
-				</Pic>
+				<h2 class=" w-full "><Title className="w-full">{d.title}</Title></h2>
+				<img class="flex-grow" src={d.url_m} />
 			</div>
 		{/each}
 	</div>

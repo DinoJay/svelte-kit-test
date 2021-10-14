@@ -1,11 +1,11 @@
-@import '@fontsource/fira-mono';
+/* @import '@fontsource/fira-mono'; */
 
-body {
+/* body {
 	min-height: 100vh;
 	margin: 0;
-}
+} */
 
-body::before {
+/* body::before {
 	content: '';
 	width: 80vw;
 	height: 100vh;
@@ -14,10 +14,25 @@ body::before {
 	left: 10vw;
 	z-index: -1;
 	opacity: 0.05;
+} */
+body {
+font-family: 'Just Another Hand', cursive;
+    background: #f3f3f3;
+
 }
 
 #svelte {
 	min-height: 100vh;
+	/* background: red; */
 	display: flex;
 	flex-direction: column;
+}
+
+@font-face {
+	font-family: ascii;
+	src: url(cartoon.ttf);
+}
+
+.ascii {
+    font-family: ascii;
 }
