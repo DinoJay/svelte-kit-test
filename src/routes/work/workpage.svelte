@@ -26,7 +26,7 @@
 
 <div class="w-full" bind:offsetWidth>
 	<div
-		class="gallery"
+		class="gallery mx-8"
 		style="grid-template-columns: repeat({Math.round(
 			Math.floor(offsetWidth / divisor / 2.8)
 		)}, {divisor}px); "

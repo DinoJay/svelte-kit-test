@@ -3,7 +3,7 @@
 	import '../app.css';
 </script>
 
-<main class="shadow-md overflow-hidden max-w-prose p-8">
+<main class="shadow-xl overflow-hidden max-w-prose p-12">
 	<slot />
 </main>
 

@@ -16,7 +16,7 @@
 </script>
 
 <div class="flex flex-col justify-center ">
-	<div class="flex  justify-start items-center mb-4">
+	<div class="flex  justify-start items-center ">
 		<Title
 			translateFirst={translateFirstTitle}
 			translateSec={translateSecTitle}
@@ -36,52 +36,54 @@
 		the morning, jogging and doing Diss-co music in the evening. As part of my day job I work on data
 		visualization and educational Games!
 	</p>
-	<div class=" mt-16 flex-grow flex">
+	<div class=" mt-12 flex-grow flex">
 		<div class="flex-grow mr-6">
-			<div class=" item1 h-48 flex flex-col">
-				<Pic src="/whiteboard.jpg" className="rounded-full box1 w-full h-full bg-cover bg-center">
+			<a href="/projects" class=" item1 h-48 flex flex-col">
+				<Pic src="/whiteboard.jpg" className="border-black">
 					<h2 class="">
 						<span class="text-3xl  py-1 uppercase font-mono"
 							><Title {translateFirst} {translateSec} {translateThird}>projects</Title></span
 						>
 					</h2>
 				</Pic>
-			</div>
-			<div class=" h-32 item2  flex flex-col ">
-				<Pic src="/mixer.jpg" className="bg-center bg-cover box1 ">
+			</a>
+			<a href="/mixtapes" class=" h-48 item2  flex flex-col ">
+				<Pic src="/mixer.jpg" className="border-black">
 					<h2 class="">
 						<span class="text-3xl  py-1 uppercase font-mono"
 							><Title {translateFirst} {translateSec} {translateThird}>mixtapes</Title></span
 						>
 					</h2>
 				</Pic>
-			</div>
-			<div class="h-32 flex  flex-col">
-				<Pic src="/tickle.jpg" className="box3 cover bg-cover bg-center w-full h-full ">
+			</a>
+		</div>
+		<div class="flex flex-col flex-grow ">
+			<a class="h-48 flex flex-col" href="/work">
+				<Pic src="me_blurred.jpg" className="border-black">
+					<h2>
+						<span class="text-3xl  py-1 uppercase font-mono"
+							><Title {translateFirst} {translateSec} {translateThird}>work</Title></span
+						>
+					</h2>
+				</Pic>
+			</a>
+			<a class="h-48 flex  flex-col">
+				<Pic src="/tickle.jpg" className="border-black">
 					<h2 class="bottom-0">
 						<span class=" text-3xl py-1 uppercase font-mono"
 							><Title {translateFirst} {translateSec} {translateThird}>TICKLE</Title></span
 						>
 					</h2>
 				</Pic>
-			</div>
+			</a>
 		</div>
-		<div class="flex flex-col flex-grow h-96">
-			<Pic src="me_blurred.jpg" className="  box1 bg-center bg-cover w-full h-full ">
-				<h2>
-					<span class="text-3xl  py-1 uppercase font-mono"
-						><Title {translateFirst} {translateSec} {translateThird}>work</Title></span
-					>
-				</h2>
-			</Pic>
-		</div>
-		<div class="flex flex-col border-round flex-grow h-96">
-			<Pic src="/holger.jpg" className=" box1 bg-cover bg-center w-full h-full ">
+		<a class="flex h-48 flex-col border-round flex-grow ">
+			<Pic src="/holger.jpg" className=" border-black">
 				<span class="py-1 text-3xl uppercase font-mono"
 					><Title {translateFirst} {translateSec} {translateThird}>Vinyl</Title></span
 				>
 			</Pic>
-		</div>
+		</a>
 	</div>
 </div>
 

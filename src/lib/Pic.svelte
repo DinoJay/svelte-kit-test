@@ -8,7 +8,7 @@
 </script>
 
 <div class=""><slot /></div>
-<div class="  flex-grow box1 bg-cover " style="background-image: url({src}); " />
+<div class="  flex-grow box1 bg-cover {className}" style="background-image: url({src}); " />
 
 <style lang="scss">
 	.box {
